@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cozy Table | Authentic African Comfort Food</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Floating Sticky Navbar -->
+  <header>
+    <nav class="arc-navbar">
+      <a href="#home" class="arc-brand">
+        <span class="arc-brand-icon"><i data-lucide="utensils-crossed" style="width: 16px; height: 16px;"></i></span>
+        <span>The Cozy Table</span>
+      </a>
+      <ul class="arc-nav-links">
+        <li><a href="#home" class="arc-nav-link">Home</a></li>
+        <li><a href="#menu" class="arc-nav-link">Menu</a></li>
+        <li><a href="#details" class="arc-nav-link">Food Details</a></li>
+        <li><a href="#about" class="arc-nav-link">About Us</a></li>
+        <li><a href="#reviews" class="arc-nav-link">Reviews</a></li>
+        <li><a href="#contact" class="arc-nav-link">Contact</a></li>
+      </ul>
+      <button id="openCartBtn" class="arc-btn arc-btn-outline" aria-label="View Cart">
+        <i data-lucide="shopping-bag" style="width: 16px; height: 16px;"></i>
+        <span>Cart</span>
+        <span id="cartCountBadge" class="cart-count-badge">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- 1. Home Section: Hero -->
+    <section id="home" class="editorial-hero">
+      <div class="hero-text-block">
+        <h1>Every plate served with <em>warmth &amp; care</em></h1>
+        <p>A welcoming home for authentic African comfort dishes—rich Liberian palm butter stews, savory Nigerien Dambou, flame-crusted Kilishi, and golden fried kala.</p>
+        <div class="hero-actions" style="display: flex; gap: 1rem;">
+          <a href="#menu" class="arc-btn arc-btn-primary">Explore The Menu &rarr;</a>
+          <a href="#about" class="arc-btn arc-btn-outline">Our Story</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-composition">
+        <div class="photo-main-frame">
+          <img src="images/palm_butter.jpg" alt="Authentic African palm butter soup bowl">
+        </div>
+        <div class="photo-floating-card">
+          <span class="dish-tag">Chef's Table Pick</span>
+          <h4>Traditional Palm Butter Soup</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Rich slow-simmered palm nut cream, smoked catfish, tender beef, country rice.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Menu Section: 20 African Dishes (10 Liberian & 10 Nigerien) -->
+    <section id="menu">
+      <div class="section-header">
+        <span class="editorial-tag">West African Heritage</span>
+        <h2>The African Comfort Collection</h2>
+        <p>Handcrafted traditional recipes from Liberia and Niger prepared with authentic spices, slow braising, and heartwarming hospitality.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="menu-filter-bar">
+        <button class="filter-pill active" data-filter="all">All African Dishes (20)</button>
+        <button class="filter-pill" data-filter="liberia">Liberian Dishes (10)</button>
+        <button class="filter-pill" data-filter="niger">Niger Dishes (10)</button>
+      </div>
+
+      <div class="compact-menu-grid">
+        <!-- ===== 10 LIBERIAN DISHES ===== -->
+        <!-- 1 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/palm_butter.jpg" alt="Traditional Palm Butter Soup">
+            <span class="bento-badge">Liberian National</span>
+          </div>
+          <div class="bento-content">
+            <h3>Traditional Palm Butter Soup</h3>
+            <p>Fresh palm nut pulp extracted and simmered with smoked catfish, beef, and crab.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$18.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="1" data-name="Palm Butter Soup" data-price="18.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/cassava_leaf.jpg" alt="Liberian Cassava Leaf Stew">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Liberian Cassava Leaf Stew</h3>
+            <p>Finely pounded tender cassava leaves cooked in red palm oil, groundnuts, and smoked meats.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$17.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="2" data-name="Cassava Leaf Stew" data-price="17.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/goat_pepper_soup.jpg" alt="Spicy Goat Pepper Soup">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Spicy Goat Pepper Soup</h3>
+            <p>Healing habanero broth infused with bitter herbs, ginger, garlic, and tender goat cuts.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$15.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="3" data-name="Goat Pepper Soup" data-price="15.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/torborgee.jpg" alt="Authentic Bean Torborgee">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Authentic Bean Torborgee</h3>
+            <p>Tangy fermented Torborgee beans braised with red palm oil, bitter balls, and smoked turkey.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$16.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="4" data-name="Bean Torborgee" data-price="16.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/jollof_stew.jpg" alt="Liberian Party Jollof Rice">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Liberian Party Jollof Rice</h3>
+            <p>Smoky long-grain rice steeped in roasted red bell pepper, tomato reduction, and thyme.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$15.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="5" data-name="Party Jollof Rice" data-price="15.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/check_rice.jpg" alt="Check Rice with Pepper Gravy">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Check Rice with Pepper Gravy</h3>
+            <p>White rice cooked with chopped jute leaves, served with rich fried tomato fish gravy.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$14.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="6" data-name="Check Rice and Gravy" data-price="14.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/fried_fish.jpg" alt="Crispy Fried Croaker Fish">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Crispy Fried Croaker Fish</h3>
+            <p>Whole Atlantic croaker scored, spiced with habanero rub, and fried golden brown.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$18.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="7" data-name="Crispy Fried Fish" data-price="18.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/dumboy.jpg" alt="Pounded Cassava Dumboy">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Pounded Cassava Dumboy</h3>
+            <p>Fresh boiled cassava pounded smooth into a velvety swallow for pepper soup.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$7.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="8" data-name="Cassava Dumboy" data-price="7.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/kala.jpg" alt="Golden Fried Kala">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Golden Fried Kala (Puff-Puff)</h3>
+            <p>Crispy golden deep-fried dough balls, light and fluffy, served with hot pepper dip.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$5.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="9" data-name="Golden Fried Kala" data-price="5.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="bento-card" data-category="liberia">
+          <div class="bento-img-wrap">
+            <img src="images/rice_bread.jpg" alt="Traditional Liberian Rice Bread">
+            <span class="bento-badge">Liberia</span>
+          </div>
+          <div class="bento-content">
+            <h3>Traditional Liberian Rice Bread</h3>
+            <p>Dense spiced cake baked with rice flour, mashed sweet bananas, and ginger punch.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$6.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="10" data-name="Liberian Rice Bread" data-price="6.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== 10 NIGER DISHES ===== -->
+        <!-- 11 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/dambou.jpg" alt="Dambou Rice Couscous with Moringa">
+            <span class="bento-badge">Niger National</span>
+          </div>
+          <div class="bento-content">
+            <h3>Dambou (Couscous with Moringa)</h3>
+            <p>Steamed semolina or rice couscous tossed with nutrient-rich moringa leaves and spices.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$15.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="11" data-name="Dambou Moringa Couscous" data-price="15.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/kilishi.jpg" alt="Nigerien Beef Kilishi">
+            <span class="bento-badge">Niger Special</span>
+          </div>
+          <div class="bento-content">
+            <h3>Kilishi (Spiced Dried Beef)</h3>
+            <p>Sun-dried wafer-thin beef crusted in peanut paste, garlic, ginger, and red Sahel pepper.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$14.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="12" data-name="Nigerien Kilishi" data-price="14.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 13 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/tuwo_shinkafa.jpg" alt="Tuwo Shinkafa with Groundnut Stew">
+            <span class="bento-badge">Niger</span>
+          </div>
+          <div class="bento-content">
+            <h3>Tuwo Shinkafa with Stew</h3>
+            <p>Velvety mashed soft rice balls served alongside rich spiced Hausa vegetable broth.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$13.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="13" data-name="Tuwo Shinkafa" data-price="13.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 14 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/miyan_taushe.jpg" alt="Miyan Taushe Pumpkin Peanut Stew">
+            <span class="bento-badge">Niger</span>
+          </div>
+          <div class="bento-content">
+            <h3>Miyan Taushe (Pumpkin Peanut Stew)</h3>
+            <p>Savory pumpkin and ground peanut stew simmered with tender lamb cuts and dawadawa.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$16.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="14" data-name="Miyan Taushe Stew" data-price="16.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 15 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/miyan_kuka.jpg" alt="Miyan Kuka Baobab Stew">
+            <span class="bento-badge">Niger</span>
+          </div>
+          <div class="bento-content">
+            <h3>Miyan Kuka (Baobab Leaf Soup)</h3>
+            <p>Traditional green soup made from dried ground baobab leaves, smoked fish, and dried beef.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$14.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="15" data-name="Miyan Kuka Soup" data-price="14.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 16 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/taguella.jpg" alt="Taguella Saharan Desert Bread & Stew">
+            <span class="bento-badge">Niger Tuareg</span>
+          </div>
+          <div class="bento-content">
+            <h3>Taguella &amp; Tuareg Meat Stew</h3>
+            <p>Traditional flatbread broken into rich Sahara lamb stew with cumin, dates, and tomatoes.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$17.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="16" data-name="Tuareg Taguella Stew" data-price="17.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 17 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/doungouri.jpg" alt="Doungouri Niébé Bean Stew">
+            <span class="bento-badge">Niger</span>
+          </div>
+          <div class="bento-content">
+            <h3>Doungouri (Niébé Bean Stew)</h3>
+            <p>Slow-simmered Sahel cowpeas cooked in red pepper oil, sweet onions, and tender beef ribs.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$12.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="17" data-name="Doungouri Bean Stew" data-price="12.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 18 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/masa.jpg" alt="Masa Fermented Rice Cakes">
+            <span class="bento-badge">Niger Street</span>
+          </div>
+          <div class="bento-content">
+            <h3>Waina / Masa (Pan-Fried Rice Cakes)</h3>
+            <p>Fermented short-grain rice batter fried into golden fluffy pan cakes with pepper sauce.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$7.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="18" data-name="Masa Rice Cakes" data-price="7.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 19 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/koko.jpg" alt="Koko Spiced Millet Porridge">
+            <span class="bento-badge">Niger Morning</span>
+          </div>
+          <div class="bento-content">
+            <h3>Koko (Spiced Millet Porridge)</h3>
+            <p>Steaming spiced pearl millet porridge infused with ginger, cloves, and ground chilies.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$6.00</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="19" data-name="Koko Millet Porridge" data-price="6.00">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 20 -->
+        <article class="bento-card" data-category="niger">
+          <div class="bento-img-wrap">
+            <img src="images/zobo.jpg" alt="Zobo Hibiscus Spiced Drink">
+            <span class="bento-badge">Niger Drink</span>
+          </div>
+          <div class="bento-content">
+            <h3>Zobo / Karkadeh (Hibiscus Spiced Drink)</h3>
+            <p>Chilled ruby infusion of dried roselle hibiscus calyces, ginger root, and citrus slices.</p>
+            <div class="bento-footer">
+              <span class="bento-price">$4.50</span>
+              <button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="20" data-name="Zobo Hibiscus Drink" data-price="4.50">+ Add</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Food Details Section -->
+    <section id="details">
+      <div class="section-header">
+        <span class="editorial-tag">Heritage Technique</span>
+        <h2>Recipe &amp; Ingredient Specimen</h2>
+        <p>A transparent look inside our slow-simmered Traditional Palm Butter Soup.</p>
+      </div>
+
+      <div class="specimen-card">
+        <div class="specimen-photo">
+          <img src="images/palm_butter.jpg" alt="Traditional Palm Butter Detail">
+        </div>
+        <div class="specimen-details">
+          <span class="editorial-tag">Specialty No. 01</span>
+          <h3>Traditional Palm Butter Soup</h3>
+          <span class="specimen-subtitle">West African Heritage &bull; Slow-Simmered Fresh Palm Nut Cream</span>
+
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Fresh oil palm nuts are boiled and pounded in a wooden mortar to extract the rich, creamy red butter. Simmered for hours with smoked catfish and tender beef until a glossy, thick stew emerges.
+          </p>
+
+          <div class="specimen-columns">
+            <div class="specimen-col">
+              <h4><i data-lucide="leaf" style="width: 15px; height: 15px;"></i> Key Harvest Ingredients</h4>
+              <ul class="specimen-list">
+                <li>Fresh African Oil Palm Nuts (Pulp)</li>
+                <li>Smoked Dry Catfish &amp; Blue Crab</li>
+                <li>Braised Beef &amp; Goat Meat</li>
+                <li>Habanero Peppers &amp; Country Onions</li>
+              </ul>
+            </div>
+            <div class="specimen-col">
+              <h4><i data-lucide="info" style="width: 15px; height: 15px;"></i> Culinary Profile</h4>
+              <ul class="specimen-list">
+                <li>Simmer Time: 3–4 Hours</li>
+                <li>Serving Style: Poured Over Hot Country Rice</li>
+                <li>Dietary: Dairy-Free &bull; Gluten-Free</li>
+                <li>Heat Level: Bold &amp; Spicy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="specimen-metrics">
+            <div class="metric-item">
+              <span>Calories</span>
+              <strong>520 kcal</strong>
+            </div>
+            <div class="metric-item">
+              <span>Protein</span>
+              <strong>28g</strong>
+            </div>
+            <div class="metric-item">
+              <span>Healthy Fats</span>
+              <strong>32g</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. About Us Section -->
+    <section id="about" class="editorial-story">
+      <div class="story-backdrop-art">
+        <img src="images/ambiance.jpg" alt="The Cozy Table warm dining ambiance">
+      </div>
+      <div class="story-content">
+        <span class="story-tag">Our Ethos</span>
+        <blockquote class="story-quote">
+          “At The Cozy Table, every meal is made with care and served with warmth. We’re a welcoming place where friends and family can relax, connect, and enjoy delicious comfort food in a cozy atmosphere.”
+        </blockquote>
+      </div>
+      <div class="story-author">
+        <h4>The Cozy Table Family</h4>
+        <p>Founded on the belief that honest ingredients, traditional West African recipes from Liberia and Niger, and welcoming hospitality turn everyday dinners into lasting memories.</p>
+      </div>
+    </section>
+
+    <!-- 5. Reviews Section -->
+    <section id="reviews">
+      <div class="section-header">
+        <span class="editorial-tag">Table Testimonials</span>
+        <h2>Words From Our Guests</h2>
+        <p>What travelers, critics, and neighbors say after pulling up a chair.</p>
+      </div>
+
+      <div class="editorial-reviews">
+        <div class="quote-card">
+          <div>
+            <div class="quote-mark">&ldquo;</div>
+            <p class="quote-body">The Palm Butter Soup poured over country rice tasted just like home. Thick, glossy, packed with smoked catfish and tender meat. Pure comfort on a plate.</p>
+          </div>
+          <div class="quote-author">
+            <div class="author-circle">EA</div>
+            <div class="author-info">
+              <strong>Elena Alvarez</strong>
+              <span>Neighborhood Resident</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <div>
+            <div class="quote-mark">&ldquo;</div>
+            <p class="quote-body">The Nigerien Dambou with moringa and the crispy Kilishi are exceptional. The Cozy Table treats every guest with unmatched African warmth.</p>
+          </div>
+          <div class="quote-author">
+            <div class="author-circle">MC</div>
+            <div class="author-info">
+              <strong>Marcus Chen</strong>
+              <span>Food &amp; Culture Journal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <div>
+            <div class="quote-mark">&ldquo;</div>
+            <p class="quote-body">The smoked Party Jollof and Tuwo Shinkafa made our family dinner so memorable. Golden fried kala and chilled Zobo drink are the perfect finish!</p>
+          </div>
+          <div class="quote-author">
+            <div class="author-circle">SJ</div>
+            <div class="author-info">
+              <strong>Sarah Jenkins</strong>
+              <span>Weekend Regular</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact Us Section -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="editorial-tag">Reservations &amp; Inquiry</span>
+        <h2>Pull Up A Chair</h2>
+        <p>Reserve a cozy corner table or send an inquiry for private dinners and gatherings.</p>
+      </div>
+
+      <div class="editorial-contact">
+        <div class="contact-meta">
+          <h3>The Hearthstone Dining Room</h3>
+          <p>We keep several tables unreserved for walk-ins each evening, but welcome inquiries and family dinner reservations in advance.</p>
+
+          <div class="contact-points">
+            <div class="point-item">
+              <div class="point-icon"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i></div>
+              <div>
+                <strong>Location</strong>
+                <span>Near Crystal Mall, Kalawad Road, Rajkot, Gujarat 360005</span>
+              </div>
+            </div>
+            <div class="point-item">
+              <div class="point-icon"><i data-lucide="phone" style="width: 16px; height: 16px;"></i></div>
+              <div>
+                <strong>Direct Line</strong>
+                <span>+91 98250 34810 / +91 (0281) 258-4900</span>
+              </div>
+            </div>
+            <div class="point-item">
+              <div class="point-icon"><i data-lucide="mail" style="width: 16px; height: 16px;"></i></div>
+              <div>
+                <strong>Inquiries</strong>
+                <span>hello@thecozytable.in</span>
+              </div>
+            </div>
+            <div class="point-item">
+              <div class="point-icon"><i data-lucide="clock" style="width: 16px; height: 16px;"></i></div>
+              <div>
+                <strong>Hours</strong>
+                <span>Monday – Sunday &bull; 11:30 AM &ndash; 11:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="editorial-form">
+          <div class="input-block">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" class="editorial-input" placeholder="e.g. Alex Morgan" required>
+          </div>
+          <div class="input-block">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="editorial-input" placeholder="alex@example.com" required>
+          </div>
+          <div class="input-block">
+            <label for="message">Table Reservation or Note</label>
+            <textarea id="message" class="editorial-input" placeholder="Let us know your date, guest count, or special requests..." required></textarea>
+          </div>
+          <button type="submit" class="arc-btn arc-btn-primary" style="align-self: flex-start;">Send Request &rarr;</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. Arc Cart Drawer Component -->
+  <aside id="cartDrawer" class="arc-drawer" aria-label="Shopping Cart">
+    <div class="arc-drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <i data-lucide="shopping-bag" style="width: 18px; height: 18px; color: var(--accent);"></i>
+        <h3>Your Order</h3>
+      </div>
+      <button id="closeCartBtn" class="arc-drawer-close" aria-label="Close Cart">&times;</button>
+    </div>
+
+    <div id="cartItemsList" class="arc-drawer-body">
+      <!-- Items dynamically populated via script.js -->
+    </div>
+
+    <div class="arc-drawer-footer">
+      <div class="drawer-summary-line">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <div class="drawer-summary-line">
+        <span>Estimated Tax (8%)</span>
+        <span id="cartTax">$0.00</span>
+      </div>
+      <div class="drawer-summary-line" style="font-size: 1.05rem; font-weight: 700; color: var(--text-main); border-top: 1px dashed var(--border-subtle); padding-top: 0.6rem; margin-top: 0.4rem;">
+        <span>Total</span>
+        <span id="cartTotal" style="color: var(--accent);">$0.00</span>
+      </div>
+
+      <button id="checkoutBtn" class="arc-btn arc-btn-primary checkout-action-btn">
+        <span>Proceed to Checkout</span>
+        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Drawer Backdrop Overlay -->
+  <div id="cartBackdrop" class="arc-drawer-backdrop"></div>
+
+  <!-- Notification / Confirmation Modal -->
+  <div id="arcModalBackdrop" class="arc-modal-backdrop">
+    <div class="arc-modal-card">
+      <div class="arc-modal-icon">
+        <i data-lucide="check-circle" style="width: 24px; height: 24px;"></i>
+      </div>
+      <h3 id="arcModalTitle" class="arc-modal-title">Order Confirmed</h3>
+      <p id="arcModalBody" class="arc-modal-body">Your order has been placed. We look forward to cooking for you!</p>
+      <button id="arcModalCloseBtn" class="arc-btn arc-btn-primary" style="margin-top: 1.25rem; width: 100%;">Wonderful</button>
+    </div>
+  </div>
+
+  <footer class="editorial-footer">
+    <div class="container footer-content">
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 0;">&copy; 2026. Handcrafted with care &amp; warmth.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

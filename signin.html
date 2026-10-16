@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | The Cozy Table</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <nav class="arc-navbar">
+      <a href="index.html#home" class="arc-brand">
+        <span class="arc-brand-icon"><i data-lucide="utensils-crossed" style="width: 16px; height: 16px;"></i></span>
+        <span>The Cozy Table</span>
+      </a>
+      <ul class="arc-nav-links">
+        <li><a href="index.html#home" class="arc-nav-link">Home</a></li>
+        <li><a href="index.html#menu" class="arc-nav-link">Menu</a></li>
+        <li><a href="signup.html" class="arc-nav-link">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="display: flex; justify-content: center; align-items: center; min-height: 85vh; padding-top: 4rem;">
+    <div class="editorial-form" style="max-width: 480px; width: 100%; background: var(--bg-card); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--border-subtle);">
+      <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
+        <span class="editorial-tag">Welcome Back</span>
+        <h2>Sign In To Your Table</h2>
+        <p>Access your order history, saved addresses, and active reservations.</p>
+      </div>
+
+      <form id="signinForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+        <div class="input-block">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="editorial-input" placeholder="name@gmail.com" required>
+        </div>
+        <div class="input-block">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="editorial-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="arc-btn arc-btn-primary" style="width: 100%; justify-content: center;">Sign In &rarr;</button>
+      </form>
+
+      <p style="text-align: center; font-size: 0.88rem; color: var(--text-muted); margin-top: 1.5rem;">
+        Don't have an account? <a href="signup.html" style="color: var(--accent); text-decoration: none; font-weight: 600;">Create Account</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="editorial-footer">
+    <div class="container footer-content">
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 0;">&copy; 2026 The Cozy Table. Handcrafted with care &amp; warmth.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

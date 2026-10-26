@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Issue | The Cozy Table</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <nav class="arc-navbar">
+      <a href="index.html#home" class="arc-brand">
+        <span class="arc-brand-icon"><i data-lucide="utensils-crossed" style="width: 16px; height: 16px;"></i></span>
+        <span>The Cozy Table</span>
+      </a>
+      <ul class="arc-nav-links">
+        <li><a href="index.html#home" class="arc-nav-link">Home</a></li>
+        <li><a href="contact.html" class="arc-nav-link">Contact</a></li>
+        <li><a href="report.html" class="arc-nav-link active">Report Issue</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="display: flex; justify-content: center; align-items: center; min-height: 85vh; padding-top: 5rem;">
+    <div class="editorial-form" style="max-width: 540px; width: 100%; background: var(--bg-card); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--border-subtle);">
+      <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
+        <span class="editorial-tag">Support &amp; Feedback</span>
+        <h2>Report an Issue</h2>
+        <p>Experiencing an issue with an order, reservation, or our website? Let our team know.</p>
+      </div>
+
+      <form id="reportForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+        <div class="input-block">
+          <label for="repname">Your Name</label>
+          <input type="text" id="repname" class="editorial-input" placeholder="e.g. Marcus Chen" required>
+        </div>
+        <div class="input-block">
+          <label for="reptype">Issue Category</label>
+          <select id="reptype" class="editorial-input" required>
+            <option value="order">Order Discrepancy / Missing Item</option>
+            <option value="delivery">Delivery Delay</option>
+            <option value="reservation">Table Reservation Issue</option>
+            <option value="website">Website / Technical Bug</option>
+            <option value="other">Other Concern</option>
+          </select>
+        </div>
+        <div class="input-block">
+          <label for="repdetails">Issue Details</label>
+          <textarea id="repdetails" class="editorial-input" placeholder="Please provide order number or description of the issue..." style="min-height: 120px;" required></textarea>
+        </div>
+        <button type="submit" class="arc-btn arc-btn-primary" style="width: 100%; justify-content: center;">Submit Report &rarr;</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="editorial-footer">
+    <div class="container footer-content">
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 0;">&copy; 2026 The Cozy Table. Handcrafted with care &amp; warmth.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

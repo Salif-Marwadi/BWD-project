@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History | The Cozy Table</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <nav class="arc-navbar">
+      <a href="index.html#home" class="arc-brand">
+        <span class="arc-brand-icon"><i data-lucide="utensils-crossed" style="width: 16px; height: 16px;"></i></span>
+        <span>The Cozy Table</span>
+      </a>
+      <ul class="arc-nav-links">
+        <li><a href="index.html#home" class="arc-nav-link">Home</a></li>
+        <li><a href="index.html#menu" class="arc-nav-link">Menu</a></li>
+        <li><a href="drinks.html" class="arc-nav-link">Drinks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top: 6rem; padding-bottom: 4rem;">
+    <div class="section-header">
+      <span class="editorial-tag">Past Gatherings</span>
+      <h2>Your Order History</h2>
+      <p>Review your previous culinary orders and re-order your favorite comfort dishes.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+      <div class="specimen-card" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.8rem;">
+          <div>
+            <span class="editorial-tag">Order #CT-8492</span>
+            <h4 style="margin-top: 0.2rem;">Delivered on Oct 12, 2026</h4>
+          </div>
+          <span style="background: rgba(46, 125, 50, 0.1); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Completed</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.92rem; color: var(--text-muted);">
+          <span>Items: Traditional Palm Butter Soup, Golden Fried Kala, Zobo Drink</span>
+          <strong style="color: var(--text-main);">$27.50</strong>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+          <a href="index.html#menu" class="arc-btn arc-btn-outline arc-btn-sm">Reorder Items</a>
+        </div>
+      </div>
+
+      <div class="specimen-card" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.8rem;">
+          <div>
+            <span class="editorial-tag">Order #CT-7810</span>
+            <h4 style="margin-top: 0.2rem;">Delivered on Sep 28, 2026</h4>
+          </div>
+          <span style="background: rgba(46, 125, 50, 0.1); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Completed</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.92rem; color: var(--text-muted);">
+          <span>Items: Dambou Moringa Couscous, Nigerien Kilishi</span>
+          <strong style="color: var(--text-main);">$29.00</strong>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+          <a href="index.html#menu" class="arc-btn arc-btn-outline arc-btn-sm">Reorder Items</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="editorial-footer">
+    <div class="container footer-content">
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 0;">&copy; 2026 The Cozy Table. Handcrafted with care &amp; warmth.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

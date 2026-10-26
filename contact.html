@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | The Cozy Table</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <nav class="arc-navbar">
+      <a href="index.html#home" class="arc-brand">
+        <span class="arc-brand-icon"><i data-lucide="utensils-crossed" style="width: 16px; height: 16px;"></i></span>
+        <span>The Cozy Table</span>
+      </a>
+      <ul class="arc-nav-links">
+        <li><a href="index.html#home" class="arc-nav-link">Home</a></li>
+        <li><a href="index.html#menu" class="arc-nav-link">Menu</a></li>
+        <li><a href="contact.html" class="arc-nav-link active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top: 6rem; padding-bottom: 4rem;">
+    <div class="section-header">
+      <span class="editorial-tag">Reservations &amp; Inquiry</span>
+      <h2>Pull Up A Chair</h2>
+      <p>Reserve a cozy corner table or send an inquiry for private dinners and gatherings.</p>
+    </div>
+
+    <div class="editorial-contact" style="max-width: 1000px; margin: 0 auto;">
+      <div class="contact-meta">
+        <h3>The Hearthstone Dining Room</h3>
+        <p>We keep several tables unreserved for walk-ins each evening, but welcome inquiries and family dinner reservations in advance.</p>
+        <div class="contact-points">
+          <div class="point-item">
+            <div class="point-icon"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i></div>
+            <div><strong>Location</strong><span>Near Crystal Mall, Kalawad Road, Rajkot, Gujarat 360005</span></div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon"><i data-lucide="phone" style="width: 16px; height: 16px;"></i></div>
+            <div><strong>Direct Line</strong><span>+91 98250 34810 / +91 (0281) 258-4900</span></div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon"><i data-lucide="mail" style="width: 16px; height: 16px;"></i></div>
+            <div><strong>Inquiries</strong><span>hello@thecozytable.in</span></div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon"><i data-lucide="clock" style="width: 16px; height: 16px;"></i></div>
+            <div><strong>Hours</strong><span>Monday – Sunday &bull; 11:30 AM &ndash; 11:00 PM</span></div>
+          </div>
+        </div>
+      </div>
+
+      <form id="contactPageForm" class="editorial-form">
+        <div class="input-block">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" class="editorial-input" placeholder="Enter your name" required>
+        </div>
+        <div class="input-block">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="editorial-input" placeholder="name@gmail.com" required>
+        </div>
+        <div class="input-block">
+          <label for="message">Table Reservation or Note</label>
+          <textarea id="message" class="editorial-input" placeholder="Let us know your date, guest count, or special requests..." required></textarea>
+        </div>
+        <button type="submit" class="arc-btn arc-btn-primary" style="align-self: flex-start;">Send Request &rarr;</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="editorial-footer">
+    <div class="container footer-content">
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 0;">&copy; 2026 The Cozy Table. Handcrafted with care &amp; warmth.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

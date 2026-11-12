@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traditional Drinks | The Cozy Table</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <nav class="arc-navbar">
+      <a href="index.html#home" class="arc-brand">
+        <span class="arc-brand-icon"><i data-lucide="utensils-crossed" style="width: 16px; height: 16px;"></i></span>
+        <span>The Cozy Table</span>
+      </a>
+      <ul class="arc-nav-links">
+        <li><a href="index.html#home" class="arc-nav-link">Home</a></li>
+        <li><a href="index.html#menu" class="arc-nav-link">Menu</a></li>
+        <li><a href="drinks.html" class="arc-nav-link active">Drinks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top: 6rem; padding-bottom: 4rem;">
+    <div class="section-header">
+      <span class="editorial-tag">Liberian &amp; Nigerien Refreshments</span>
+      <h2>Authentic African Beverages</h2>
+      <p>Hand-brewed herbal fusions, spiced hibiscus coolers, and refreshing traditional tonics from Liberia and Niger.</p>
+    </div>
+
+    <div class="menu-filter-bar">
+      <button class="filter-pill active">All Heritage Drinks (6)</button>
+    </div>
+
+    <div class="compact-menu-grid">
+      <article class="bento-card">
+        <div class="bento-img-wrap"><img src="images/zobo.jpg" alt="Zobo"><span class="bento-badge">Niger Signature</span></div>
+        <div class="bento-content">
+          <h3>Zobo / Karkadeh (Hibiscus Spiced Drink)</h3>
+          <p>Chilled ruby infusion of dried roselle hibiscus calyces, ginger root, cloves, and citrus slices.</p>
+          <div class="bento-footer"><span class="bento-price">$4.50</span><button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="d1" data-name="Zobo Hibiscus Drink" data-price="4.50">+ Add</button></div>
+        </div>
+      </article>
+
+      <article class="bento-card">
+        <div class="bento-img-wrap"><img src="images/ginger_beer.jpg" alt="Ginger Beer"><span class="bento-badge">Liberian Special</span></div>
+        <div class="bento-content">
+          <h3>Liberian Fire Ginger Beer</h3>
+          <p>Non-alcoholic fiery home-brewed ginger tonic spiced with pineapple rind, cloves, and cane sugar.</p>
+          <div class="bento-footer"><span class="bento-price">$5.00</span><button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="d2" data-name="Liberian Ginger Beer" data-price="5.00">+ Add</button></div>
+        </div>
+      </article>
+
+      <article class="bento-card">
+        <div class="bento-img-wrap"><img src="images/karkade_mint.jpg" alt="Mint Tea"><span class="bento-badge">Niger Oasis</span></div>
+        <div class="bento-content">
+          <h3>Sahara Mint Green Tea</h3>
+          <p>Traditional strong green tea brewed over coals and poured high with fresh spearmint and foam.</p>
+          <div class="bento-footer"><span class="bento-price">$4.00</span><button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="d3" data-name="Sahara Mint Green Tea" data-price="4.00">+ Add</button></div>
+        </div>
+      </article>
+
+      <article class="bento-card">
+        <div class="bento-img-wrap"><img src="images/lemon_tonic.jpg" alt="Lemon Tonic"><span class="bento-badge">Liberia</span></div>
+        <div class="bento-content">
+          <h3>Liberian Citrus Lemon Tonic</h3>
+          <p>Fresh squeezed country limes blended with crushed sugarcane juice and a hint of crushed ginger.</p>
+          <div class="bento-footer"><span class="bento-price">$4.50</span><button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="d4" data-name="Liberian Citrus Lemon Tonic" data-price="4.50">+ Add</button></div>
+        </div>
+      </article>
+
+      <article class="bento-card">
+        <div class="bento-img-wrap"><img src="images/degue.jpg" alt="Degue"><span class="bento-badge">Niger Comfort</span></div>
+        <div class="bento-content">
+          <h3>Degue (Millet &amp; Sweet Yogurt Drink)</h3>
+          <p>Rich, creamy yogurt blended with rolled steamed millet couscous pearls, vanilla, and nutmeg.</p>
+          <div class="bento-footer"><span class="bento-price">$6.00</span><button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="d5" data-name="Degue Yogurt Drink" data-price="6.00">+ Add</button></div>
+        </div>
+      </article>
+
+      <article class="bento-card">
+        <div class="bento-img-wrap"><img src="images/tom_brown.jpg" alt="Tom Brown"><span class="bento-badge">Heritage Blend</span></div>
+        <div class="bento-content">
+          <h3>Roasted Corn &amp; Peanut Malt Drink</h3>
+          <p>Comforting warm roasted corn, millet, and peanut malt beverage sweetened with honey.</p>
+          <div class="bento-footer"><span class="bento-price">$5.00</span><button class="arc-btn arc-btn-primary arc-btn-sm add-to-cart-btn" data-id="d6" data-name="Tom Brown Malt Drink" data-price="5.00">+ Add</button></div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="editorial-footer">
+    <div class="container footer-content">
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 0;">&copy; 2026 The Cozy Table. Handcrafted with care &amp; warmth.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
